@@ -8,7 +8,7 @@ import SalesAgentView from "./pages/SalesAgentView/SalesAgentView";
 import Reports from "./pages/Reports/Reports";
 import SalesAgents from "./pages/SalesAgents/SalesAgents";
 import Settings from "./pages/Settings/Settings";
-import Layout from "./components/layout/Layout";
+import Layout from "./components/Layout/Layout";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
