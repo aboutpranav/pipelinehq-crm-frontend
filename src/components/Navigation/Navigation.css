@@ -19,6 +19,17 @@
   padding: 0 2rem;
 }
 
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
@@ -50,4 +61,23 @@
 .navbar-link:hover {
   color: white;
   background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-link {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
 }

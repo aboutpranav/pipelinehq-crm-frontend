@@ -97,7 +97,7 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.stat-icon-wrapper {
+/* .stat-icon-wrapper {
   width: 60px;
   height: 60px;
   border-radius: 999px;
@@ -110,6 +110,25 @@
 .stat-icon {
   font-size: 1.6rem;
   color: #ffffff;
+} */
+
+.stat-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem auto;
+  overflow: hidden; /* IMPORTANT */
+}
+
+.stat-icon {
+  font-size: 1.6rem;
+  line-height: 1; /* FIX */
+  display: flex; /* FIX */
+  align-items: center; /* FIX */
+  justify-content: center;
 }
 
 .stat-value {

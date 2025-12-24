@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        <button className="navbar-hamburger" onClick={toggleSidebar}>
+          ☰
+        </button>
         <Link to="/" className="navbar-brand">
           PipeLineHQ
         </Link>

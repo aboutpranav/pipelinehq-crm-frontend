@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
   const location = useLocation();
 
   const navItems = [
@@ -22,20 +22,29 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="sidebar">
-      <nav className="sidebar-nav">
-        {navItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`sidebar-link ${isActive(item.path) ? "active" : ""}`}
-          >
-            <span className="sidebar-icon">{item.icon}</span>
-            <span className="sidebar-label">{item.label}</span>
-          </Link>
-        ))}
-      </nav>
-    </aside>
+    <>
+      {/* Mobile Overlay */}
+      {isOpen && <div className="sidebar-overlay" onClick={onClose} />}
+
+      <aside className={`sidebar ${isOpen ? "show" : ""}`}>
+        <button className="sidebar-close" onClick={onClose}>
+          ×
+        </button>
+        <nav className="sidebar-nav">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`sidebar-link ${isActive(item.path) ? "active" : ""}`}
+              onClick={onClose}
+            >
+              <span className="sidebar-icon">{item.icon}</span>
+              <span className="sidebar-label">{item.label}</span>
+            </Link>
+          ))}
+        </nav>
+      </aside>
+    </>
   );
 };
 

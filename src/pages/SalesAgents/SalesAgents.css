@@ -160,6 +160,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 .table-title {
@@ -199,9 +200,10 @@
 
 .table-controls {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.75rem;
   align-items: center;
+  margin-left: auto;
 }
 
 .select-all-label {
@@ -212,6 +214,7 @@
   font-size: 0.875rem;
   color: #1f2937;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .select-all-checkbox {
@@ -422,7 +425,7 @@
   border: 1px solid rgba(102, 126, 234, 0.2);
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  font-size: 0.575rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -439,7 +442,7 @@
   border: 1px solid rgba(239, 68, 68, 0.2);
   border-radius: 8px;
   padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  font-size: 0.575rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -876,4 +879,176 @@
   background: rgba(16, 185, 129, 0.08);
   color: #065f46;
   border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .table-column-headers,
+  .agent-row {
+    grid-template-columns: 30px 1.5fr 1.5fr 1fr 1fr 1.5fr;
+  }
+
+  .leads-by-agent-container {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sales-agents-container {
+    padding: 1rem;
+  }
+
+  .sales-agents-header {
+    padding: 1.5rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .add-agent-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .table-header {
+    padding: 1rem;
+  }
+
+  .table-header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .table-header-left {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .select-all-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+
+  /* Mobile card view for agents */
+  .table-column-headers {
+    display: none;
+  }
+
+  .agent-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    background: white;
+  }
+
+  .agent-checkbox-cell {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .agent-details {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .agent-contact,
+  .agent-performance {
+    font-size: 0.875rem;
+  }
+
+  .agent-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .view-leads-btn,
+  .delete-agent-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.875rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Leads by agent mobile */
+  .leads-by-agent-container {
+    grid-template-columns: 1fr;
+  }
+
+  .leads-sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lead-group-leads {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .modal-header {
+    padding: 1.5rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .agent-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
