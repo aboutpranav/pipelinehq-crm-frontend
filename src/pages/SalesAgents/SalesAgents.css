@@ -961,7 +961,6 @@
     width: 100%;
   }
 
-  /* Mobile card view for agents */
   .table-column-headers {
     display: none;
   }
@@ -1005,7 +1004,6 @@
     padding: 0.6rem 1rem;
   }
 
-  /* Leads by agent mobile */
   .leads-by-agent-container {
     grid-template-columns: 1fr;
   }

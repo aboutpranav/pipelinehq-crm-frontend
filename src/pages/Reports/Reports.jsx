@@ -186,7 +186,7 @@ const Reports = () => {
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          indexAxis: "y", // Horizontal bars
+          indexAxis: "y",
           plugins: {
             legend: { display: false },
             title: {

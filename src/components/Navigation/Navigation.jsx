@@ -11,9 +11,9 @@ const Navigation = ({ toggleSidebar }) => {
         <Link to="/" className="navbar-brand">
           PipeLineHQ
         </Link>
-        <div className="navbar-menu">
+        {/* <div className="navbar-menu">
           <button className="navbar-link">Logout</button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

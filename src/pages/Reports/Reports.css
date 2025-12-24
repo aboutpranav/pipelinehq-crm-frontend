@@ -1,10 +1,6 @@
-/* =========================
-   Layout & Background
-   ========================= */
-
 .reports-container {
   min-height: 100vh;
-  /* same gradient shell as Dashboard */
+
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 2rem;
 }
@@ -14,10 +10,6 @@
   margin: 0 auto;
   padding: 0;
 }
-
-/* =========================
-   Header
-   ========================= */
 
 .reports-header-card {
   background: rgba(255, 255, 255, 0.95);
@@ -55,10 +47,6 @@
   font-weight: 600;
 }
 
-/* =========================
-   Sections / Titles
-   ========================= */
-
 .reports-section {
   margin-bottom: 2rem;
 }
@@ -69,10 +57,6 @@
   color: #ffffff;
   margin-bottom: 1.5rem;
 }
-
-/* =========================
-   Stat cards (top metrics)
-   ========================= */
 
 .reports-stats-grid {
   display: grid;
@@ -97,21 +81,6 @@
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* .stat-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 0.75rem auto;
-}
-
-.stat-icon {
-  font-size: 1.6rem;
-  color: #ffffff;
-} */
-
 .stat-icon-wrapper {
   width: 60px;
   height: 60px;
@@ -120,14 +89,14 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.75rem auto;
-  overflow: hidden; /* IMPORTANT */
+  overflow: hidden;
 }
 
 .stat-icon {
   font-size: 1.6rem;
-  line-height: 1; /* FIX */
-  display: flex; /* FIX */
-  align-items: center; /* FIX */
+  line-height: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -145,10 +114,6 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-
-/* =========================
-   Charts area
-   ========================= */
 
 .reports-charts-grid {
   display: grid;
@@ -192,10 +157,6 @@
   max-height: 100%;
 }
 
-/* =========================
-   Empty states
-   ========================= */
-
 .reports-empty-state {
   display: flex;
   flex-direction: column;
@@ -233,10 +194,6 @@
   color: #9ca3af;
   font-size: 0.875rem;
 }
-
-/* =========================
-   Recent closed leads list
-   ========================= */
 
 .reports-recent-leads {
   background: rgba(255, 255, 255, 0.95);
@@ -311,10 +268,6 @@
   font-size: 0.875rem;
 }
 
-/* =========================
-   Loading
-   ========================= */
-
 .loading-container {
   display: flex;
   justify-content: center;
@@ -339,10 +292,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* =========================
-   Responsive
-   ========================= */
 
 @media (max-width: 1024px) {
   .reports-charts-grid {
